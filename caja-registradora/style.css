@@ -1,0 +1,157 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+h2 {
+    color: #2980b9;
+    margin: 20px 0 15px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #3498db;
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+}
+
+/* Contenedores principales */
+body > div {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Formularios y entradas */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Botón */
+#calcular-btn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#calcular-btn:hover {
+    background-color: #3498db;
+}
+
+/* Sección de denominaciones para el pago */
+#entregado-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#entregado-container div {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#entregado-container input {
+    width: calc(100% - 10px);
+}
+
+/* Sección de resultado */
+#resultado {
+    background-color: #e8f4fc;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+#resultado p {
+    margin-bottom: 8px;
+}
+
+/* Estado de la caja */
+#estado-caja {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+#estado-caja p {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#estado-caja p:last-child {
+    grid-column: 1 / -1;
+    background-color: #e6f2ff;
+    font-weight: bold;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #entregado-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    #estado-caja {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    #entregado-container, #estado-caja {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
