@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Caja Registradora</h1>
+    
+    <div>
+        <h2>Ingresar Transacción</h2>
+        <div>
+            <label>Precio del artículo (€):</label>
+            <input type="number" step="0.01" id="precio" min="0">
+        </div>
+        
+        <h3>Dinero entregado:</h3>
+        <input type="number" step="0.01" id="entregado" min="0">
+        <div id="entregado-container"></div>
+            
+        </div>
+        
+        <button id="calcular-btn">Calcular Cambio</button>
+    </div>
+    
+    <div id="resultado"></div>
+    
+    <div>
+        <h2>Estado de la Caja</h2>
+        <div id="estado-caja"></div>
+    </div>
+</body>
+</html>
